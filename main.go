@@ -32,12 +32,12 @@ func (m *MockDriver) ReadFrame(ctx context.Context) (gocan.Frame, error) {
 
 func main() {
 	// 加载发送帧
-	sendFrames, err := gocan.LoadFramesFromFile("src/send.json")
+	sendFrames, err := gocan.LoadFramesFromFile("data/send.json")
 	if err != nil {
 		log.Fatalf("load send.json failed: %v", err)
 	}
 	// 加载接收帧
-	recvFrames, err := gocan.LoadFramesFromFile("src/receive.json")
+	recvFrames, err := gocan.LoadFramesFromFile("data/receive.json")
 	if err != nil {
 		log.Fatalf("load receive.json failed: %v", err)
 	}
