@@ -1,0 +1,11 @@
+[
+  {
+    "channel": "PCAN_USBBUS1"
+  },
+  {
+    "channel": "PCAN_USBBUS2"
+  },
+  {
+    "channel": "can0"
+  }
+]

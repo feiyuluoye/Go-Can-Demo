@@ -63,3 +63,13 @@ func (m *MockDriver) WriteFrame(ctx context.Context, frame Frame) error {
 	fmt.Printf("Send: ID=0x%X Data=%v\n", frame.ID, frame.Data)
 	return nil
 }
+
+func (m *MockDriver) ReadFrame(ctx context.Context) (Frame, error) {
+	if m.idx >= len(m.frames) {
+		return Frame{}, fmt.Errorf("no more frames")
+	}
+	frame := m.frames[m.idx]
+	m.idx++
+	fmt.Printf("Receive: ID=0x%X Data=%v\n", frame.ID, frame.Data)
+	return frame, nil
+}
