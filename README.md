@@ -78,7 +78,7 @@ func (d *WindowsPCANDriver) ReadFrame(ctx context.Context) (can.Frame, error) {
 
 ### 3.2 基础通信示例
 
-``go
+```go
 package main
 
 import (
@@ -189,7 +189,7 @@ cREATE TABLE can_devices (
 
 ### 5.1 单元测试要点
 
-``go
+```go
 func TestCanCommunication(t *testing.T) {
 	// 创建模拟驱动
 	mockDriver := &can.MockDriver{
